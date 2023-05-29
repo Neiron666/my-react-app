@@ -35,6 +35,18 @@
   border-radius: 12px;
 }
 
+.button {
+  font-size: 0.7rem;
+  margin: 5px;
+}
+
+.button:hover {
+  /* Стили, применяемые при наведении */
+  /* Например, изменение цвета фона и шрифта */
+  background-color: #f0f0f0;
+  color: #333;
+}
+
 @media (min-width: 580px) {
   .cost-item__description {
     flex-direction: row;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Costs from "./components/Costs/Costs";
 import NewCost from "./components/NewCost/NewCost";
 
@@ -36,10 +36,15 @@ const App = () => {
       return [cost, ...prevCosts];
     });
   };
+  const removeCostHandler = (removeCost) => {
+    setCosts((prevCosts) => {
+      return [...prevCosts.filter((item) => item.id !== removeCost)];
+    });
+  };
   return (
     <div className="App">
       <NewCost onAddCost={addCostHandler} />
-      <Costs costs={costs} />
+      <Costs costs={costs} onremoveCostHandler={removeCostHandler} />
     </div>
   );
 };

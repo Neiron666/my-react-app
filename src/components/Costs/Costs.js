@@ -21,7 +21,10 @@ const Costs = (props) => {
       <Card className="costs">
         <CostsFilter year={selectedYear} onChangeYear={yearChangeHandler} />
         <CostsDiagram costs={filteredCosts} />
-        <CostList costs={filteredCosts} />
+        <CostList
+          costs={filteredCosts}
+          onremoveCostHandler={props.onremoveCostHandler}
+        />
       </Card>
     </div>
   );
