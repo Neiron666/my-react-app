@@ -3,7 +3,6 @@ import "./CostDate";
 import CostDate from "./CostDate";
 import Card from "../UI/Card";
 import { useEffect } from "react";
-import RemoveCostButton from "../RemoveCost/RemoveCost";
 
 const CostItem = (props) => {
   return (
